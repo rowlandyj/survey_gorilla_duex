@@ -1,0 +1,7 @@
+<h1> <%= @survey.title %> </h1>
+<% @survey.questions.each do |t| %>
+  <%= t.content %> <br>
+    <% t.answers.each do |p| %>
+      <%= p.content %> <br>
+    <% end %>
+<% end %>

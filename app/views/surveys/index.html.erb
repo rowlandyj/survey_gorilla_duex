@@ -1,6 +1,6 @@
 <h1>HURR ALL THE SURVEY AT</h1>
 <% @surveys.each do |survey| %>
-  <h2><%= survey.title %></h2>
+  <h2><%= link_to "#{survey.title}", user_survey_path(@user, survey) %></h2>
 <% end %>
 
 <%= link_to "Click me to make a new survey!", new_user_survey_path(@user.id), id: 'new-survey' %>
